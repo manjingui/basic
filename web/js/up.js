@@ -13,7 +13,7 @@ $(function() {
         //存放图片的父元素
         var fileList = file.files;
         //获取的图片文件
-        console.log(fileList + "======filelist=====");
+        
 
         var input = $(this).parent();
         //文本框的父亲元素

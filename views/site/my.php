@@ -84,7 +84,7 @@ $userId = Yii::$app->user->getId();
 
         let activity_status = '';
         activity_status = $('[name=activity_status]').val();
-        console.log(activity_status);
+
 
         $("#pager").sjAjaxPager({
             url: `index.php?r=site/mylist`,
@@ -125,7 +125,7 @@ $userId = Yii::$app->user->getId();
 
                     str += '<div class="it_expertxt_my">' + temp1 + temp2 + temp3 + temp4 + temp5 + temp6 + temp7 + temp8 + temp9 + '</div>';
                 }
-                console.log(str);
+
                 $(".latestlist").empty().append(str)//遍历在界面上
 
             },

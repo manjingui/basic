@@ -117,12 +117,12 @@
 
         let activity_type = '';
         activity_type = $('[name=activity_type]').val();
-        console.log(activity_type);
+
 
 
         let activity_zone = '';
         activity_zone = $('[name=activity_zone]').val();
-        console.log(activity_zone);
+
 
         $("#pager").sjAjaxPager({
             url: `index.php?r=activity/latest`,
@@ -134,7 +134,7 @@
             beforeSend: function () {
             },
             success: function (data) {
-                console.log(data);
+
                 var items = data['items'];
                 var str = "";
                 for (var i = 0, It = items.length; i < It; i++) {//循环
@@ -147,7 +147,7 @@
                     var temp7 ='<p>活动内容：' + items[i].activity_summary +'</p>';
                     str += '<div class="it_expertxt">' + temp1 + temp2 + temp3 + temp4 + temp5 + temp6 + temp7 + '</div>';
                 }
-                console.log(str);
+
                 $(".latestlist").empty().append(str)//遍历在界面上
 
                 // /*

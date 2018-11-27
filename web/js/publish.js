@@ -25,39 +25,38 @@ $("[name=activity_publish]").click(function () {
 
     let activity_type = '';
     activity_type = $('[name=activity_type]').val();
-    console.log(activity_type);
+
 
     let activity_place = '';
     activity_place = $('[name=activity_place]').val();
-    console.log(activity_place);
 
 
     let activity_zone = '';
     activity_zone = $('[name=activity_zone]').val();
-    console.log(activity_zone);
+
 
 
     let activity_st_time = '';
     activity_st_time = $('[name=activity_st_time]').val();
-    console.log(activity_st_time);
+
 
 
     let activity_et_time = '';
     activity_et_time = $('[name=activity_et_time]').val();
-    console.log(activity_et_time);
+
 
 
     let activity_founder = '';
     activity_founder = $('[name=activity_founder]').val();
-    console.log(activity_founder);
+
 
     let activity_phone = '';
     activity_phone = $('[name=activity_phone]').val();
-    console.log(activity_phone);
+
 
     let activity_summary = '';
     activity_summary = $('[name=activity_summary]').val();
-    console.log(activity_summary);
+
 
     $.ajax({
         url: `index.php?r=activity/publish`,
@@ -85,7 +84,7 @@ $("[name=activity_publish]").click(function () {
 
 function validatephone() {
     $('.mjgerror').remove();
-    console.log($('[name=activity_phone]').val());
+
     var phoneReg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/;
 
     if ($('[name=activity_phone]').val() == '') {

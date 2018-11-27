@@ -17,13 +17,13 @@ $("[name=sendcode]").click(function () {
     if ($("[name=sendcode]").eq(0)[0].b == true) {
         let phone = '';
         phone = $('#phone').val();
-        console.log(phone);
+
         $.ajax({
             url: `index.php?r=user/sendcode&phone=${phone}`,
             dataType: 'json',
             method: 'GET',
             success: function (data) {
-                console.log(JSON.stringify(data));
+
             },
             error: function (xhr) {
                 alert('error:' + JSON.stringify(xhr));
@@ -44,14 +44,13 @@ $("[name=login]").click(function () {
     phone = $('#phone').val();
     let code = '';
     code = $('#code').val();
-    console.log(phone);
-    console.log(code);
+
     $.ajax({
         url: `index.php?r=site/login&phone=${phone}&code=${code}`,
         dataType: 'json',
         method: 'GET',
         success: function (data) {
-            console.log(JSON.stringify(data));
+
             window.location.href="index.php?r=site/index";
         },
         error: function (xhr) {
@@ -64,13 +63,13 @@ $("[name=login]").click(function () {
 function setTimer() {
     $("[name=sendcode]").eq(0)[0].b = false;
     var time = 60;
-    console.log("ddd");
+
     var timers = setInterval(function () {
         time--;
         console.log("ddd");
         if (time <= 0) {
             time = 0;
-            console.log("ddd");
+
             $("[name=sendcode]").val('获取验证码');
             clearInterval(timers);
             $("[name=sendcode]").eq(0)[0].b = true;
